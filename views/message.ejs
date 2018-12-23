@@ -1,0 +1,23 @@
+<div id="messages">
+
+<% /* comment %>
+<% Object.keys(messages).forEach(function (type) { %>
+    <div class="notification is-<%= type %>">
+    <% messages[type].forEach(function (message) { %>
+        <%= message %><br/>
+    <% }) %>
+    </div>
+<% }) %>
+<% */ %>
+
+
+<% Object.keys(messages).forEach(function (type) { %>
+    <article class="message is-<%= type %> has-text-centered">
+    <div class="message-body">
+    <% messages[type].forEach(function (message) { %>
+        <%= message %><br/>
+    <% }) %>
+    </div>
+<% }) %>
+
+</div>
